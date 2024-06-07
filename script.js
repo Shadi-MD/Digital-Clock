@@ -1,5 +1,3 @@
-const $ = document;
-
 let hourSection = $("#hour");
 let minutSection = $("#minute");
 let secondSection = $("#seconds");
@@ -13,20 +11,9 @@ function showTime() {
   let seconds =
     now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
 
-  // hourSection.innerHTML = hours;
-  // if (hours < 10) {
-  //   hourSection.innerHTML = `0${hours}`;
-  // }
-  // minutSection.innerHTML = minutes;
-  // if (minutes < 10) {
-  //   minutSection.innerHTML = `0${minutes}`;
-  // }
-  // secondSection.innerHTML = seconds;
-  // if (seconds < 10) {
-  //   secondSection.innerHTML = `0${seconds}`;
-  // }
-
-  // console.log(seconds);
+  hourSection.html(hours);
+  minutSection.html(minutes);
+  secondSection.html(seconds);
 }
 
 setInterval(showTime, 1000);
